@@ -10,5 +10,16 @@
 <body>
 <h1>Pick a planet:</h1>
 
+<table>
+    <th>
+        <td>Planet Name</td>
+        <td>Year Length</td>
+    </th>
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.getDisplayName()}"></td>
+        <td th:text="${planet.getYearLength()}"></td>
+    </tr>
+</table>
+
 </body>
 </html>
